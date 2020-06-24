@@ -10,7 +10,7 @@ def readme():
 
 setup(
     name='miflora',
-    version='0.5',
+    version='0.6.99',
     description='Library to read data from Mi Flora sensor',
     long_description=readme(),
     long_description_content_type='text/markdown',
@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
     ],
     packages=find_packages(),
     keywords='plant sensor bluetooth low-energy ble',
