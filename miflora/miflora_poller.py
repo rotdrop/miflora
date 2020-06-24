@@ -20,6 +20,7 @@ MI_LIGHT = "light"
 MI_MOISTURE = "moisture"
 MI_CONDUCTIVITY = "conductivity"
 MI_BATTERY = "battery"
+MI_FWVERSION = "firmware"
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -147,6 +148,9 @@ class MiFloraPoller:
         # Special handling for battery attribute
         if parameter == MI_BATTERY:
             return self.battery_level()
+
+        if parameter == MI_FWVERSION:
+            return self.firmware_version()
 
         # Use the lock to make sure the cache isn't updated multiple times
         with self.lock:
